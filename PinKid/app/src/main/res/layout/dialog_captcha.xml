@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7FCF9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PinKid"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#2D7A4F"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="우리 아이가 있는 곳, 언제나 함께"
+            android:textSize="14sp"
+            android:textColor="#5AAB78"
+            android:layout_marginTop="8dp"/>
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="4dp"
+            android:background="#66B375"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webViewDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

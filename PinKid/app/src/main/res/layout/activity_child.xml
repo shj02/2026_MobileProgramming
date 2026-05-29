@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7FCF9"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- 상단 헤더: PinKid 타이틀 + 설정 버튼 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/txtPinKid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PinKid"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#2D7A4F"/>
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:text="⚙"
+                android:textSize="24sp"
+                android:textColor="#2D7A4F"
+                android:backgroundTint="#00000000"
+                android:padding="0dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="48dp"
+            android:layout_height="4dp"
+            android:background="#66B375"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- 인사 텍스트 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:gravity="bottom"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/txtChildName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#1A1A1A"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:letterSpacing="-0.02"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 어서와!"
+                android:textColor="#1A1A1A"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:letterSpacing="-0.02"/>
+
+        </LinearLayout>
+
+        <!-- 현재 위치 상태 행 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ●"
+                android:textColor="#66B375"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/txtChildZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="위치 확인 중..."
+                android:textColor="#66B375"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <!-- 현재 위치 카드 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#D2EFD8"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="현재 위치"
+                    android:textColor="#3D8C5C"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/txtCurrentAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="위치 정보를 불러오는 중..."
+                    android:textColor="#1A1A1A"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/txtLastUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#AAAAAA"
+                    android:textSize="11sp"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- 지도 카드 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMap"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <FrameLayout
+                android:id="@+id/miniMapContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- SOS 긴급 버튼 -->
+        <Button
+            android:id="@+id/btnSOS"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="🚨  SOS 긴급 연락"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#E53935"
+            app:cornerRadius="12dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="버튼을 누르면 보호자에게 즉시 알림이 전송됩니다"
+            android:textSize="11sp"
+            android:textColor="#AAAAAA"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
