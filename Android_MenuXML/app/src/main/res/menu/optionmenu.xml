@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_Text_Color"
+        android:title="Text_Color">
+        <menu>
+            <item android:id="@+id/menu_Text_Color_Red" android:title="Red"/>
+            <item android:id="@+id/menu_Text_Color_Green" android:title="Green"/>
+            <item android:id="@+id/menu_Text_Color_Blue" android:title="Blue"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_Text_Style"
+        android:title="Text_Style">
+        <menu>
+            <item android:id="@+id/menu_Text_Style_Normal" android:title="Normal"/>
+            <item android:id="@+id/menu_Text_Style_Bold" android:title="Bold"/>
+            <item android:id="@+id/menu_Text_Style_Italic" android:title="Italic"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_Text_Size"
+        android:title="Text_Size">
+        <menu>
+            <item android:id="@+id/menu_Text_Size_20sp" android:title="20sp"/>
+            <item android:id="@+id/menu_Text_Size_24sp" android:title="24sp"/>
+            <item android:id="@+id/menu_Text_Size_32sp" android:title="32sp"/>
+        </menu>
+    </item>6
+</menu>
